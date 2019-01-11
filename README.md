@@ -1,2 +1,2 @@
 # sitlab
-https://github.com/lipika3/sitlab/blob/master/sincosgraph.png
+![alt text](D:\16070123137\sincosgraph.png)
