@@ -1,0 +1,41 @@
+[System]
+Name='SIT3013_lab3'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='service'
+Range=[0 10]
+NumMFs=3
+MF1='poor':'trimf',[-4.167 0 4.167]
+MF2='good':'trimf',[0.8333 5 9.167]
+MF3='excellent':'trimf',[5.833 10 14.17]
+
+[Input2]
+Name='food'
+Range=[0 10]
+NumMFs=3
+MF1='rancid':'gaussmf',[1.77 -8.327e-17]
+MF2='good':'gaussmf',[1.77 5]
+MF3='delicious':'trimf',[5.833 10 14.17]
+
+[Output1]
+Name='tip'
+Range=[0 30]
+NumMFs=3
+MF1='cheap':'trimf',[-15 -2.22e-16 15]
+MF2='average':'trimf',[0 15 30]
+MF3='generous':'trimf',[15 30 45]
+
+[Rules]
+1 1, 1 (1) : 2
+2 0, 2 (1) : 2
+3 3, 3 (1) : 2
